@@ -54,13 +54,13 @@ app.get("/home.ejs", (req, res) => {
 
 // route for load product data
 
-app.get("/products.ejs", (req, res) => {
+app.get("/products.ejs", async (req, res) => {
     if (!req.session.cart) {
         req.session.cart =[];
     }
 
     const selectProducts = "SELECT * FROM products";    
-    db.query(selectProducts, (error, result) => {
+    await db.query(selectProducts, (error, result) => {
         const productsRow = result.rows;
         res.render("products.ejs", {products: productsRow, cart: req.session.cart});
     })
