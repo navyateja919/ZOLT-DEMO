@@ -7,7 +7,7 @@ import pkg from "jquery";
 
 const { error } = pkg;
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const db = new pg.Client({
     user: "postgres",
@@ -150,7 +150,7 @@ app.post("/data-edit", (req, res) => {
     res.redirect("/database.ejs");
 });
 
-
-app.listen(port, () => {
-    console.log(`server running port ${port}!`);
+// Listen on `port` and 0.0.0.0
+app.listen(port, "0.0.0.0", function () {
+  // ...
 });
