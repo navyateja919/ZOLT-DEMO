@@ -9,17 +9,6 @@ const { error } = pkg;
 const app = express();
 const port = process.env.PORT || 3000;
 
-const db = new pg.Client({
-    user: "postgres",
-    host: "localhost",
-    database: "zolt",
-    password: "25221901@Pos",
-    port: 5432,
-  });
-  db.connect((error) => {
-    console.log("PG database is connected successfully!")
-  });
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
@@ -59,8 +48,7 @@ app.get("/products.ejs", (req, res) => {
         req.session.cart =[];
     }
         res.render("products.ejs", {cart: req.session.cart});
-    })
-});
+    });
     
 
 app.get("/about.ejs", (req, res) => {
