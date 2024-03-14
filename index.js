@@ -58,38 +58,10 @@ app.get("/products.ejs", (req, res) => {
     if (!req.session.cart) {
         req.session.cart =[];
     }
-        res.render("products.ejs", {products: productsRow, cart: req.session.cart});
+        res.render("products.ejs", {cart: req.session.cart});
     })
 });
     
-
-
-// route for /add-cart
-
-app.post("/add-cart", (req, res) => {
-    const product_id = req.body.product_id;
-    const product_name = req.body.product_name;
-    const product_price = req.body.product_price;
-
-    let count = 0;
-
-    for (let i=0; i < req.session.cart.length; i++) {
-        if (req.session.cart[i].product_id === product_id) {
-            req.session.cart[i].quantity += 1;
-            count++
-        }
-    }
-    if (count === 0) {
-        const cart_data = {
-            product_id: product_id,
-            product_name: product_name,
-            product_price: parseFloat(product_price),
-            quantity: 1
-        };
-        req.session.cart.push(cart_data);
-    }
-    res.redirect("/products.ejs");
-});
 
 app.get("/about.ejs", (req, res) => {
     res.render("about.ejs");
@@ -120,31 +92,7 @@ app.get("/convert-img.ejs", (req, res) => {
 });
 
 
-// data postgres
 
-app.post("/data-input", (req, res) => {
-    const product_id = req.body.product_id;
-    const product_name = req.body.product_name;
-    const product_price = req.body.product_price;
-    const product_image = req.body.product_image;
-
-   db.query("INSERT INTO products (product_name, product_price, product_image) VALUES ($1, $2, $3)",
-    [product_name, product_price.toLocaleString("en", { minimumFractionDigits: 2 }), product_image]);   
-        
-    res.redirect("/database.ejs");
-});
-
-app.post("/data-edit", (req, res) => {
-    const product_id = req.body.product_id;
-    const product_name = req.body.product_name;
-    const product_price = req.body.product_price;
-    const product_image = req.body.product_image;
-
-    db.query("UPDATE products SET product_name = ($2), product_price = ($3), product_image = ($4) WHERE id = ($1)",
-    [product_id, product_name, product_price, product_image]);  
-        
-    res.redirect("/database.ejs");
-});
 
 // Listen on `port` and 0.0.0.0
 app.listen(port, "0.0.0.0", function () {
