@@ -2,10 +2,12 @@
     <!-- Your page content goes here -->
     <div class="product-page">
         <div class="product-page-header">
-            <div class="tog-btn-bg">
-                <span class="8mg tog-active">8mg</span>
-                <span class="15mg">15mg</span>
+            <div class="tog-box">
+                <div id="tog-bg"></div>
+                <button onclick="leftClick()" class="btn-mg">8mg</button>
+                <button onclick="rightClick()" class="btn-mg">15mg</button>
             </div>
+            
         </div>
         <div class="products-list">        
             <% products.forEach(function product (value) { %>
@@ -15,7 +17,7 @@
                             <img src="images/products/<%= value.product_image %>" alt="">
                             <div class="product-details">
                                 <span class="spn">8mg</span>
-                                <h5>Price: <span><%= value.product_price %></span></h5>
+                                <h5>Price: <span>$<%= value.product_price %></span></h5>
                                 
                                 <form method="post" action="/add-cart">
                                     <input type="hidden" name="product_id" value="<%= value.id %>">
@@ -24,11 +26,9 @@
                                     <input type="submit" class="btn btn-warning" value="Add To Cart">
                                 </form>    
                             </div>     
-                        </div>
-                                         
+                        </div>               
                     </div>
             <% }) %>
-            
         </div>
     </div>
    
