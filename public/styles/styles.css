@@ -630,19 +630,28 @@ nav a:hover {
 }
 
 .product-page-header {
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.product-page-header span {
-  padding: 10px;
-  width: 200px;
+  padding: 50px 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.tog-box {
+  width: 320px;
+  height: 45px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
   border-radius: 5px;
+  background-color: #000000;
+}
+
+.btn-mg {
+  padding: 10px 40px;
+  width: 100%;
+  background: transparent;
   border: none;
   outline: none;
   color: #fff;
@@ -650,19 +659,23 @@ nav a:hover {
   letter-spacing: 2px;
   font-size: 18px;
   font-weight: 600px;
+  text-align: center;
+  z-index: 2;
+  position: relative;
 }
 
-.tog-active {
+#tog-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
   background: #24A4C9;
-}
-
-.tog-btn-bg {
-  background: #000000;
   border: none;
   outline: none;
   border-radius: 5px;
-  display: flex;
-  padding: 5px;
+  width: 154px;
+  height: 100%;
+  z-index: 1;
+  transition: 0.5s;
 }
 
 .products-list {
@@ -1319,7 +1332,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .section-4-item2-sym {
   display: flex;
-  gap: 50px;
+  gap: 25px;
 }
 
 .section-4-item2-sym span {
