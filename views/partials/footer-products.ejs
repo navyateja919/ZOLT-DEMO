@@ -18,16 +18,16 @@
                     <tr>
                         <td align="left"><%= item.product_name %></td>
                         <td><%= item.quantity %></td>
-                        <td><%= item.product_price %></td>
+                        <td><%= item.product_price.toLocaleString("en", { minimumFractionDigits: 2 }) %></td>
                         <td></td>
                     </tr>
-                    <% totalQuantity += item.quantity %> 
-                    <% total += item.quantity * item.product_price %>                       
+                    <% totalQuantity += parseFloat(item.quantity) %> 
+                    <% total += parseFloat(item.quantity) * parseFloat(item.product_price.toLocaleString("en", { minimumFractionDigits: 2 })) %>                       
                    <% }); %>
                     <tr>
                         <td colspan="1" align="left"><b>Total</b></td>                        
                         <td id="total-quantity"><%= totalQuantity%></td>
-                        <td><%= total %></td>
+                        <td><%= total.toLocaleString("en", { minimumFractionDigits: 2 })%></td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
@@ -101,6 +101,22 @@ $(".close").click(function(){
 // cart total
 const totalQuantityDom = $("#total-quantity")[0].innerHTML;
 document.querySelector(".total-quantity").innerHTML = totalQuantityDom;
+
+
+// strength toggle
+
+
+
+function leftClick() {
+    let btnTog = document.getElementById('tog-bg');
+    btnTog.style.left = 0;
+}
+
+function rightClick() {
+    let btnTog = document.getElementById('tog-bg');
+    btnTog.style.left = '160px';
+}
+
 
 // chat bot
 
