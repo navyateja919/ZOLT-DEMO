@@ -62,6 +62,7 @@ app.get("/products.ejs", async (req, res) => {
     const selectProducts = "SELECT * FROM products";
     const selectProductsMg = "SELECT * FROM products15mg";
     await db.query(selectProducts, selectProductsMg, (error, result) => {
+        console.log(result);
         const productsRow = result.selectProducts.rows;
         const productsMgRow = result.selectProductsMg.rows;
         res.render("products.ejs", {products: productsRow, productsMg: productsMgRow, cart: req.session.cart});
