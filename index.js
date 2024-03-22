@@ -60,14 +60,23 @@ app.get("/products.ejs", async (req, res) => {
     }
 
     const selectProducts = "SELECT * FROM products";
-    const selectProducts15Mg = "SELECT * FROM products15mg";
-    await db.query(selectProducts, selectProducts15Mg, (error, result) => {
+    await db.query(selectProducts, (error, result) => {
         const productsRow = result.rows;
-        const products15MgRow = result.rows;
-        res.render("products.ejs", {products: productsRow, products15mg: products15MgRow, cart: req.session.cart});
+        res.render("products.ejs", {products: productsRow, cart: req.session.cart});
     })
 });
-    
+
+app.get("/products.ejs", async (req, res) => {
+    if (!req.session.cart) {
+        req.session.cart =[];
+    }
+
+    const selectProducts15Mg = "SELECT * FROM products15mg";
+    await db.query(selectProducts15Mg, (error, result) => {
+        const products15MgRow = result.rows;
+        res.render("products.ejs", {products15mg: products15MgRow, cart: req.session.cart});
+    })
+});
 
 
 // route for /add-cart
