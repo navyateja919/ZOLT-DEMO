@@ -110,11 +110,15 @@ document.querySelector(".total-quantity").innerHTML = totalQuantityDom;
 function leftClick() {
     let btnTog = document.getElementById('tog-bg');
     btnTog.style.left = 0;
+    let productListTog = document.getElementById('products-list');
+    productListTog.style.transform = 'translateX(0)';
 }
 
 function rightClick() {
     let btnTog = document.getElementById('tog-bg');
     btnTog.style.left = '160px';
+    let productListTog = document.getElementById('products-list');
+    productListTog.style.transform = 'translateX(-50%)';
 }
 
 
