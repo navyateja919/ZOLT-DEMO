@@ -59,12 +59,12 @@ app.get("/products.ejs", async (req, res) => {
         req.session.cart =[];
     }
 
-    const selectProducts = "SELECT * FROM products";
-    const selectProductsMg = "SELECT * FROM products15mg";
-    await db.query(selectProducts, selectProductsMg, (error, result) => {
+    const selectProducts = 
+    const selectProductsMg = 
+    await db.query("SELECT * FROM products";"SELECT * FROM products15mg";, (error, result) => {
         console.log(result);
-        const productsRow = result.selectProducts.rows[0];
-        const productsMgRow = result.selectProductsMg.rows[1];
+        const productsRow = result[0].rows;
+        const productsMgRow = result[1].rows;
         res.render("products.ejs", {products: productsRow, productsMg: productsMgRow, cart: req.session.cart});
     })
 });
