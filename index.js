@@ -64,19 +64,7 @@ app.get("/products.ejs", async (req, res) => {
     await db.query(selectProducts, selectProductsMg, (error, result) => {
         const productsRow = result.selectProducts.rows;
         const products15MgRow = result.selectProductsMg.rows;
-        res.render("products.ejs", {products: productsRow, productsMg: productsRow, cart: req.session.cart});
-    })
-});
-
-app.get("/products.ejs", async (req, res) => {
-    if (!req.session.cart) {
-        req.session.cart =[];
-    }
-
-    const selectProducts15Mg = "SELECT * FROM products15mg";
-    await db.query(selectProducts15Mg, (error, result) => {
-        const products15MgRow = result.rows;
-        res.render("products.ejs", {productsMg: products15MgRow, cart: req.session.cart});
+        res.render("products.ejs", {products: productsRow, productsMg: productsMgRow, cart: req.session.cart});
     })
 });
 
