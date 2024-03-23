@@ -18,16 +18,16 @@
                     <tr>
                         <td align="left"><%= item.product_name %></td>
                         <td><%= item.quantity %></td>
-                        <td><%= item.product_price %></td>
+                        <td><%= item.product_price.toLocaleString("en", { minimumFractionDigits: 2 }) %></td>
                         <td></td>
                     </tr>
                     <% totalQuantity += parseFloat(item.quantity) %> 
-                    <% total += parseFloat(item.quantity) * parseFloat(item.product_price) %>                       
+                    <% total += parseFloat(item.quantity) * parseFloat(item.product_price.toLocaleString("en", { minimumFractionDigits: 2 })) %>                       
                    <% }); %>
                     <tr>
                         <td colspan="1" align="left"><b>Total</b></td>                        
                         <td id="total-quantity"><%= totalQuantity%></td>
-                        <td><%= total%></td>
+                        <td><%= total.toLocaleString("en", { minimumFractionDigits: 2 })%></td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
