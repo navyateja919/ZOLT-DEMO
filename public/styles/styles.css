@@ -405,13 +405,12 @@ nav a:hover {
   font-size: 26px;
   color: #000000;
   padding: 5px 10px;
-  letter-spacing: 2px;
-  word-spacing: 5px;
+  letter-spacing: 3px;
+  word-spacing: 7px;
   font-weight: 600;
   background-color: transparent;
   border: 3px solid black;
   border-radius: 5px;
-  text-transform: capitalize;
 }
 
 .headings-item1 ul {
@@ -1310,9 +1309,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .section-4-item1-strength .strength-8 {
-  height: 15px;
-  width: 40px;
-  border: 1px solid black;
+  height: 20px;
+  width: 55px;
+  border: 2px solid black;
   background-color: #24A4C9;
 }
 
@@ -1326,15 +1325,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .section-4-item3-strength .strength-15 {
-  height: 15px;
-  width: 40px;
-  border: 1px solid black;
+  height: 20px;
+  width: 55px;
+  border: 2px solid black;
   background-color: #24A4C9;
 }
 
 .section-4-item2-sym {
   display: flex;
-  gap: 25px;
+  gap: 75px;
 }
 
 .section-4-item2-sym span {
@@ -1349,7 +1348,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .section-4-item2-sym span .bx {
-  font-size: 30px;
+  font-size: 45px;
   padding: 7px;
   color: #24A4C9;
   border: 1px solid #24A4C9;
@@ -1370,7 +1369,7 @@ input[type=number]::-webkit-outer-spin-button {
   background-position: 0, 0, 0;
   background-size: 33.3% auto, 33.3% auto, 33.3% auto;
   position: relative;
-  animation: backloop infinite ease-in 18s;
+  animation: backloop infinite ease-in 24s;
 }
 
 @keyframes backloop {
@@ -1394,10 +1393,38 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
+.section-4-item4 h2 {
+  z-index: 1;
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 500;
+  border: 4px solid rgb(36, 164, 201);
+  padding: 5px 20px;
+  border-radius: 25px 5px 5px 5px;
+  word-spacing: 5px;
+  letter-spacing: 0.5px;
+}
+
 .section-4-item4 img {
-  width: 320px;
-  height: 210px;
-  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  position: absolute;
+  top: 135px;
+  right: 735px;
+  animation: pouch infinite ease 12s;
+}
+
+@keyframes pouch {
+  0% {
+    margin-right: 0;
+  }
+  50% {
+    margin-right: 195px;
+  }
+  100% {
+    margin-right: 0;
+  }
 }
 
 .sec-4-it-4-div-1 {
@@ -1408,14 +1435,3 @@ input[type=number]::-webkit-outer-spin-button {
   backdrop-filter: opacity(0.5);
 }
 
-.section-4-item4 h2 {
-  z-index: 1;
-  color: #ffffff;
-  font-size: 42px;
-  font-weight: 500;
-  border: 3px solid rgb(36, 164, 201);
-  padding: 5px 20px;
-  border-radius: 25px 5px 5px 5px;
-  word-spacing: 5px;
-  letter-spacing: 0.5px;
-}
