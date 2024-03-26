@@ -1375,7 +1375,7 @@ input[type=number]::-webkit-outer-spin-button {
   background-position: 0, 0, 0;
   background-size: 33.3% auto, 33.3% auto, 33.3% auto;
   position: relative;
-  animation: backloop infinite ease-in 24s;
+  animation: backloop infinite ease-in 20s;
 }
 
 @keyframes backloop {
@@ -1401,13 +1401,17 @@ input[type=number]::-webkit-outer-spin-button {
 
 .section-4-item4 h2 {
   z-index: 1;
+  padding: 25px 50px 25px 20px;
+  border-left: 8px solid rgb(36, 164, 201);
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   color: #ffffff;
   font-size: 42px;
   font-weight: 500;
-  border-left: 5px solid rgb(36, 164, 201);
-  padding: 5px 20px;
   word-spacing: 5px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .section-4-item4 img {
@@ -1448,7 +1452,8 @@ input[type=number]::-webkit-outer-spin-button {
   height: 75vh;
   background-image: url("/images/special-blend.webp");
   background-attachment: fixed;
-  border-top: 0.2px solid rgb(237, 246, 249);
+  margin: 0;
+  outline: 0;
 }
 
 .sec-5-overlay {
@@ -1469,14 +1474,20 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .sec-5-div-1-con {
-  text-align: left;
   z-index: 1;
-  padding: 5px 25px;
-  border-left: 5px solid rgb(36, 164, 201);
-  color: #fff;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 25px 50px 25px 20px;
+  border-left: 8px solid rgb(36, 164, 201);
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: left;
 }
 
 .sec-5-div-1 h1 {
@@ -1486,16 +1497,17 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .sec-5-div-1 h6 {
-  font-size: 21px;
-  font-weight: 300;
-  line-height: 28px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
 }
 
 .sec-5-div-2 {
   display: flex;
   width: 100%;
   height: 12%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
 }
 
 /* secion 5 carousel */
