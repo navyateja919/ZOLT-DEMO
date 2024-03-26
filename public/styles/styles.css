@@ -1375,7 +1375,7 @@ input[type=number]::-webkit-outer-spin-button {
   background-position: 0, 0, 0;
   background-size: 33.3% auto, 33.3% auto, 33.3% auto;
   position: relative;
-  animation: backloop infinite ease-in 20s;
+  animation: backloop infinite linear 17s;
 }
 
 @keyframes backloop {
@@ -1434,7 +1434,7 @@ input[type=number]::-webkit-outer-spin-button {
   position: absolute;
   top: 135px;
   right: 735px;
-  animation: pouch infinite ease 12s;
+  animation: pouch infinite linear 10s;
 }
 
 @keyframes pouch {
