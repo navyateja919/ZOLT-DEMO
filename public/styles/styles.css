@@ -1419,8 +1419,8 @@ input[type=number]::-webkit-outer-spin-button {
 .section-4-item4 h2::before {
   position: absolute;
   left: 0;
-  top: 50%;
-  bottom: 50%;
+  top: 0;
+  bottom: 0;
   content: "";
   width: 8px;
   height: 180px;
@@ -1508,8 +1508,8 @@ input[type=number]::-webkit-outer-spin-button {
 .sec-5-div-1-con::before {
   position: absolute;
   left: 0;
-  top: 50%;
-  bottom: 50%;
+  top: 0;
+  bottom: 0;
   content: "";
   width: 8px;
   height: 210px;
@@ -1526,7 +1526,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .sec-5-div-1 h6 {
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 32px;
 }
 
@@ -1581,32 +1581,80 @@ input[type=number]::-webkit-outer-spin-button {
 
 .section-6 {
   width: 100%;
-  height: 100vh;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* section 6 */
-
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
+.sec-6-div-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  border: none;
+  height: 75%;
+  background-image: linear-gradient(135deg,  rgb(36, 164, 201), rgb(237, 246, 249), rgb(36, 164, 201), rgb(237, 246, 249));
+  background-size: 200% 200%;
+  animation: gradient linear infinite 12s;
+}
+
+.sec-6-d-1-left {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
 }
 
-.acc-active, .accordion:hover {
-  background-color: #ccc;
+.sec-6-d-1-left-con h1 {
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 60px;
 }
 
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+.sec-6-d-1-left-con h6 {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  line-height: 50px;
+}
+
+.sec-6-d-1-left-con a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #000000;
+  position: relative;
+  padding-left: 18px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sec-6-d-1-left-con a::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  align-self: center;
+  content: "";
+  height: 20px;
+  width: 6px;
+  border-radius: 50px;
+  background-color: #000000;
+}
+
+.sec-6-d-1-left-con a:hover > .bx {
+  transform: translateX(15px);
+  transition: ease-in-out 0.4s;
+}
+
+.sec-6-d-1-right {
+  width: 35%;
+}
+
+.sec-6-d-1-right img {
+  width: 420px;
+  height: 320px;
 }
