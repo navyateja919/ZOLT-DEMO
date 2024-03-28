@@ -1078,20 +1078,20 @@ input[type=number]::-webkit-outer-spin-button {
 /* chat bot */
 
 .open-button {
-  background-color: #000000;
-  color: white;
-  padding: 14px 12px;
-  border: 1px solid black;
-  cursor: pointer;
   position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 180px;
-  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  padding: 14px 12px;
+  cursor: pointer;
+  bottom: 23px;
+  right: 28px;
+  width: 180px;
+  border: 0.5px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: #000000;
+  color: white;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -1591,7 +1591,7 @@ input[type=number]::-webkit-outer-spin-button {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 75%;
+  height: 85%;
   background-image: linear-gradient(135deg,  rgb(36, 164, 201), rgb(237, 246, 249), rgb(36, 164, 201), rgb(237, 246, 249));
   background-size: 200% 200%;
   animation: gradient linear infinite 12s;
@@ -1639,7 +1639,7 @@ input[type=number]::-webkit-outer-spin-button {
   bottom: 0;
   align-self: center;
   content: "";
-  height: 20px;
+  height: 25px;
   width: 6px;
   border-radius: 50px;
   background-color: #000000;
@@ -1657,4 +1657,57 @@ input[type=number]::-webkit-outer-spin-button {
 .sec-6-d-1-right img {
   width: 360px;
   height: 280px;
+}
+
+
+.sec-6-div-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  background-color: #000000;
+}  
+
+.sec-6-div-2-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  color: #ffffff;
+}
+
+.sec-6-div-2-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px; 
+  color: #ffffff; 
+  position: relative;
+}
+
+.sec-6-div-2 .bx {
+  font-size: 42px;
+  color: #24A4C9;
+}
+
+.sec-6-div-2 .bx:hover {
+  color: #ffffff;
+}
+
+.sec-6-div-2-right::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  align-self: center;
+  content: "";
+  height: 28px;
+  width: 6px;
+  border-radius: 50px;
+  background-color: #ffffff;
 }
