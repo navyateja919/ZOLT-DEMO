@@ -1308,11 +1308,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 .section-4-item1-strength {
   display: flex;
-  gap: 2px;
+  gap: 3px;
 }
 
 .section-4-item1-strength .strength-8 {
-  height: 20px;
+  height: 15px;
   width: 55px;
   border: 2px solid black;
   background-color: #24A4C9;
@@ -1325,12 +1325,12 @@ input[type=number]::-webkit-outer-spin-button {
 
 .section-4-item3-strength {
   display: flex;
-  gap: 2px;
+  gap: 3px;
 }
 
 
 .section-4-item3-strength .strength-15 {
-  height: 20px;
+  height: 15px;
   width: 55px;
   border: 2px solid black;
   background-color: #24A4C9;
