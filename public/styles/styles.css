@@ -407,10 +407,8 @@ nav a:hover {
   padding: 5px 10px;
   letter-spacing: 1px;
   word-spacing: 5px;
-  font-weight: 600;
+  font-weight: 700;
   background-color: transparent;
-  border: 3px solid black;
-  border-radius: 5px;
   text-transform: capitalize;
 }
 
@@ -422,7 +420,7 @@ nav a:hover {
   font-weight: 500;
   line-height: 55px;
   text-transform: capitalize;
-  border: 3px solid black;
+  border: 5px solid black;
   border-radius: 5px;
 }
 
@@ -443,7 +441,7 @@ nav a:hover {
 
 .slider-container-item1 {
   border-radius: 5px;
-  border: 3px solid rgb(0, 0, 0);
+  border: 5px solid rgb(0, 0, 0);
   max-width: 40%;
   max-height: 63%;
 }
@@ -1716,4 +1714,268 @@ input[type=number]::-webkit-outer-spin-button {
   width: 6px;
   border-radius: 50px;
   background-color: #ffffff;
+}
+
+/* section 7 */
+
+.section-7 {
+  width: 100%;
+  height: 100vh;
+}
+
+.sec-7-div-1 {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 65px;
+  background-image: linear-gradient(135deg,  rgb(36, 164, 201), rgb(237, 246, 249), rgb(36, 164, 201), rgb(237, 246, 249));
+  background-size: 200% 200%;
+  animation: gradient linear infinite 12s;
+}
+
+/* section 7 accordion */
+
+.sec-7-d-acc-con {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*Question*/
+.question {
+  background: rgb(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  margin: 0;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
+/*Answer*/
+.answers {
+  padding: 0px 15px;
+  margin: 5px auto;
+  width:100%!important;
+  height: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.questions:checked ~ .answers{
+  height: auto;
+  opacity: 1;
+  padding: 15px;  
+}
+
+/*FAQ Toggle*/
+.question .bx {
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+  color: #fff;
+}
+
+.questions:checked ~ .question > .bx {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+}
+
+.questions {
+  display: none;
+}
+
+
+/* section 7 mail letter */
+
+.sec-7-d-1-sub {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.sec-7-d-1-sub-h {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.sec-7-d-1-sub-h input[type=email] {
+  margin-left: 35px;
+  width: 15%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.subscribe:hover {
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2), 2px 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.sec-7-div-1 .bx {
+  font-size: 18px;
+  padding-right: 7px;
+}
+
+
+.sec-7-grid-item-1 {grid-area: item1;}
+.sec-7-grid-item-2 {grid-area: item2;}
+.sec-7-grid-item-3 {grid-area: item3;}
+.sec-7-grid-item-4 {grid-area: item4;}
+.sec-7-grid-item-5 {grid-area: item5;}
+
+.sec-7-div-2 {
+  width: 100%;
+  height: 15%;
+  display: grid;
+  grid-template-areas: 'item1 item2 item3 item4'
+                       'item1 item2 item3 item4'
+                       'item1 item2 item3 item4'
+                       'item5 item5 item5 item5';
+  align-items: center;
+  background-color: #000000;
+  color: #fff;
+}
+
+.sec-7-grid-item-1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-7-grid-item-1 img {
+  width: 200px;
+  height: 100px;
+}
+
+
+.sec-7-grid-item-2, .sec-7-grid-item-3, .sec-7-grid-item-4 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.sec-7-grid-item-2::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  align-self: center;
+  content: "";
+  height: 38px;
+  width: 4px;
+  border-radius: 50px;
+  background-color: rgb(255, 255, 255, 0.7);
+}
+
+.sec-7-grid-item-2::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  align-self: center;
+  content: "";
+  height: 38px;
+  width: 4px;
+  border-radius: 50px;
+  background-color: rgb(255, 255, 255, 0.9);
+}
+
+
+.sec-7-div-2 h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.sec-7-div-2 p {
+  font-size: 18px;
+}
+
+.sec-7-div-2 h4 .bx {
+  font-size: 22px;
+}
+
+.sec-7-grid-item-3::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  align-self: center;
+  content: "";
+  height: 38px;
+  width: 4px;
+  border-radius: 50px;
+  background-color: rgb(255, 255, 255, 0.9);
+}
+
+.sec-7-grid-item-5 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  place-items: center;
+  align-items: center;
+  background-color: #EDF6F9;
+}
+
+.sec-7-grid-item-5 p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sec-7-grid-item-5 p a {
+  color: #000000;
+}
+
+.sec-7-grid-item-5 p .bx {
+  font-size: 22px;
 }
