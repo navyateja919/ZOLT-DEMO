@@ -27,8 +27,8 @@ body {
     display: none;
   }
   
-  #header {
-    grid-template-columns: 1fr 1fr;
+  header {
+    grid-template-columns: 1fr 1fr !important;
   }
 
   #logo {
@@ -269,7 +269,7 @@ nav a:hover {
 
 .sticky {
   background-color: #EDF6F9;
-  position: fixed;
+  position: -webkit-sticky;
   top: 0;
   right: 0;
   left: 0;
