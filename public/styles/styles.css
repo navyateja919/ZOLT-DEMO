@@ -269,7 +269,7 @@ nav a:hover {
 
 .sticky {
   background-color: #EDF6F9;
-  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
