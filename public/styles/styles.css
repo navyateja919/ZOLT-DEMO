@@ -15,6 +15,10 @@ body {
 
 /* RESPONSIVE */
 
+.menu-icon {
+  display: none;
+}
+
 /* for mobile */
 
 @media (min-width: 319px) and (max-width: 480px) {
@@ -23,25 +27,49 @@ body {
     font-size: 13px;
   }
 
+  #header {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .menu-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .bx-menu-alt-left {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 6px;
+    border-radius: 50px;
+    background-color: rgb(0, 0, 0);
+  }
+
   #navbar {
     display: none;
   }
   
-  header {
-    grid-template-columns: 1fr 1fr !important;
+  #logo {
+    justify-content: center;
+    align-items: center;
   }
 
-  #logo {
-    justify-content: flex-end;
-  }
 
   #logo img {
     width: 90px;
     height: 45px;
+    margin: 0;
   }
 
-  .bxs-cart, .bxs-user {
-    font-size: 16px !important;
+  #shopping-cart {
+    display: none;
+  }
+
+  .account-icon {
+    margin-right: 0 !important;
+  }
+
+  .account-icon .bxs-user {
+    font-size: 17px !important;
   }
 
   .total-quantity {
